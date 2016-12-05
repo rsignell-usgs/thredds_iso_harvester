@@ -2,9 +2,9 @@
 
 from thredds_iso_harvester.harvest import ThreddsIsoHarvester
 from thredds_crawler.crawl import Crawl
-skip = Crawl.SKIPS + ['.*MATLAB.*', '\..*']
-select = ['.*\.ncml']
+skip = Crawl.SKIPS + ['.*MATLAB.*']
+select = ['.*\.ncd']
 
 # FWF
 ThreddsIsoHarvester(catalog_url="http://gamone.whoi.edu/thredds/catalog/coawst_4/use/fmrc/catalog.xml", 
-    skip=skip, select=select, out_dir="/srv/iso/frf")
+    skip=skip, select=select, out_dir="/srv/iso/coawst")
